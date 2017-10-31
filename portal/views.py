@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
 from .models import Upload
 from .forms import UploadForm
 
 # Create your views here.
 
-def uploadView(request):
+def index(request):
 	files = Upload.objects.all()
 	return render(request, 'portal/index.html', {'files':files})
 

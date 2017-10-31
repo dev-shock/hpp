@@ -1,7 +1,10 @@
 from django.conf.urls import url
-from .views import uploadView, uploadFormView 
+from .views import index, uploadFormView 
+
+app_name = 'portal'
+
 urlpatterns = [
-	url(r'^$', uploadView ,name='upload_view'),
+	url(r'^$', index ,name='index'),
 	url(r'^upload/$', uploadFormView ,name='upload_form_view')
 
 ]

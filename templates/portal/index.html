@@ -12,7 +12,7 @@
 </li></ul>
 {% endfor %}
 {% else %}
-<h1>There's no file to display. Kindly <a href="#">upload</a> some.</h1>
+<h1>There's no file to display. Kindly <a href="{% url 'portal:upload_form_view' %}">upload</a> some.</h1>
 {% endif %}
 
 
