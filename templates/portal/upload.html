@@ -2,11 +2,15 @@
 
 {% block content %}
 
+
+<div class="form-container">
+<h3>Kindly upload the files here</h3>
 <form method="post" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ upload_form.as_p }}
-	<button>Submit</button>
+	<button class="btn btn-primary">Submit</button>
 
 </form>
+</div>
 
 {% endblock %}
