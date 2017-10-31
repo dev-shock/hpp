@@ -13,12 +13,12 @@ def index(request):
 
 def uploadFormView(request):
 	if request.method == 'POST':
-		upload_form = UploadForm(data=request.POST)
+		upload_form = UploadForm(request.POST, request.FILES)
 
 		if upload_form.is_valid():
 			uploadForm = upload_form.save()
 
-			return HttpResponseRedirect(reverse('uploadView'))
+			return HttpResponseRedirect(reverse('portal:index'))
 
 	else:
 		upload_form = UploadForm()
