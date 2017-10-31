@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+{% if files %}
+<ul><li>
+{% for file in files %}
+<h2>{{ file.title }}</h2>
+<h6>{{ file.date }}</h6>
+<h4>{{ file.file_type }}</h4>
+<a href="{{ file.file.url }}">{{ file.file }}</a>
+</li></ul>
+{% endfor %}
+{% else %}
+<h1>There's no file to display. Kindly <a href="#">upload</a> some.</h1>
+{% endif %}
+
+
+
+{% endblock %}	
